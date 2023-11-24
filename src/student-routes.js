@@ -1,6 +1,6 @@
 
 const {Router} = require('express')
-const rawStudents = require('../../students.json')
+const rawStudents = require('../students.json')
 
 
 const {default : students} = rawStudents
