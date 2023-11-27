@@ -1,9 +1,11 @@
 // index.js
 const express = require('express')
 const {router} = require('./src/student-routes.js')
+const cors = require('cors')
 
 const app = express()
 const PORT = 4000
+app.use(cors())
 const baseUrl = '/api'
 app.use(express.json())
 
