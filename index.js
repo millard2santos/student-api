@@ -5,14 +5,14 @@ const cors = require('cors')
 
 const app = express()
 const PORT = 4000
-app.use(cors())
 const baseUrl = '/api'
+app.use(cors())
 app.use(express.json())
-
+app.use(baseUrl,router)
 app.get('/', (req, res) => {
   res.send('Hey this is my API running 🥳')
 })
-app.use(baseUrl,router)
+
 
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
